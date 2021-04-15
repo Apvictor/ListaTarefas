@@ -11,11 +11,10 @@ Projeto - Lista de Tarefas
 
 <p>Olá, seja bem vindo! ✌</p>
 
-<p>Sou Armando Pereira, desenvolvedor de software na Simonini Software, atualmente estou no último semestre da Faculdade de Análise e Desenvolvimento de Sistemas.<br>
-Disponível para atuar no mercado de desenvolvimento de sistemas.</p>
+<p>Sou Armando Pereira, desenvolvedor de software na Simonini Software, atualmente estou no último semestre da Faculdade de Análise e Desenvolvimento de Sistemas.<br></p>
 
 <!-- GIF -->
-<img rel="icon" src="../src/assets/telas/animationTelas.gif" type="image/gif"><br>
+<img rel="icon" src="/src/assets/telas/animationTelas.gif" type="image/gif"><br>
 
 <ul>
   <li>Principais Tecnologias Utilizadas: Ionic 5, TypeScript e CSS.<br></li>
