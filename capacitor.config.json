@@ -1,6 +1,6 @@
 {
   "appId": "io.ionic.starter",
-  "appName": "AppTest",
+  "appName": "Lista de Tarefas",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

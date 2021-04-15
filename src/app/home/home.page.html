@@ -1,20 +1,51 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon size="large" name="create"></ion-icon>
+      </ion-button>
+    </ion-buttons>
     <ion-title>
-      Blank
+      LISTA DE TAREFAS
     </ion-title>
   </ion-toolbar>
+
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-list class="animated bounceInUp">
+    <ion-item *ngIf="tasks.length < 1">
+      <ion-label text-center text-uppercase style="font-size: 20px; text-align: center;"> <b>Não há tarefas</b>
+      </ion-label>
+    </ion-item>
+  </ion-list>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-list>
+    <ion-item-sliding style="cursor: pointer; height: 80%;" *ngFor="let task of tasks">
+      <ion-item color="light" (click)="openActions(task)">
+        <ion-label style="font-size: 20px;" text-uppercase *ngIf="task.done">
+          <del>{{task.name}}
+          </del>
+          <p style="font-size: 13px;">Arraste para a direita para deletar</p>
+        </ion-label>
+        <ion-label style="font-size: 20px;" text-uppercase *ngIf="!task.done">{{task.name}}
+          <p style="font-size: 13px;">Arraste para a direita para deletar</p>
+        </ion-label>
+        <ion-icon *ngIf="!task.done" slot="start" name="radio-button-off"></ion-icon>
+        <ion-icon *ngIf="task.done" slot="start" name="checkmark-circle" color="success"></ion-icon>
+      </ion-item>
+
+      <ion-item-options color="danger" side="start">
+        <ion-item-option style="font-size: 20px; color: #eb445a" (click)="delete(task)" color="light"><b>DELETAR</b>
+          <ion-icon slot="start" name="trash" color="danger"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="showAdd()">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>
