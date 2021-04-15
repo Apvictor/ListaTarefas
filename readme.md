@@ -23,7 +23,7 @@ Projeto - Lista de Tarefas
 <!-- FINALIDADE DO PROJETO -->
 <h3>Finalidade do Projeto </h3>
 <p>
-Quem nunca se pegou cheio de taferas e não sabia como organizá-las?<br>
+Quem nunca se pegou cheio de tarefas e não sabia como organizá-las?<br>
 Foi pensando neste propósito que decidi desenvolver uma aplicação para organizar as minhas tarefas diárias.<br>
 O projeto consiste em um Aplicativo para organizar tarefas.
 </p>
